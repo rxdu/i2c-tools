@@ -1,0 +1,1 @@
+/usr/bin/cc     CMakeFiles/test_i2c_readreg.dir/i2c_readreg.c.o  -o ../../bin/test_i2c_readreg -rdynamic ../../lib/libtools.a 

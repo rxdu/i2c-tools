@@ -6,14 +6,18 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 # Add libraries
 set(TOOLS_LIB_SRC
-	src/librav_math.cpp
-    src/poly_curve.cpp
-    src/quad_flattraj.cpp
+	src/i2cbusses.c
+    src/i2cdetect.c
+	src/i2cdump.c
+	src/i2cget.c
+	src/i2cset.c 
+	src/util.c
 )
 add_library(tools STATIC ${TOOLS_LIB_SRC})
 # target_link_libraries(tools -lpthread)
 target_include_directories(tools PUBLIC
 	$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/inc>
-	$<INSTALL_INTERFACE:include>
-	PRIVATE src)
+	$<INSTALL_INTERFACE:include>)
+
+add_subdirectory(tests)
 

@@ -30,8 +30,9 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <linux/i2c-dev.h>
-#include "i2cbusses.h"
-#include "util.h"
+
+#include "i2c-tools/i2cbusses.h"
+#include "i2c-tools/util.h"
 #include "../version.h"
 
 static void help(void) __attribute__ ((noreturn));
@@ -159,59 +160,62 @@ int main(int argc, char *argv[])
 	int force = 0, yes = 0, version = 0;
 
 	/* handle (optional) flags first */
-	while (1+flags < argc && argv[1+flags][0] == '-') {
-		switch (argv[1+flags][1]) {
-		case 'V': version = 1; break;
-		case 'f': force = 1; break;
-		case 'y': yes = 1; break;
-		default:
-			fprintf(stderr, "Error: Unsupported option "
-				"\"%s\"!\n", argv[1+flags]);
-			help();
-			exit(1);
-		}
-		flags++;
-	}
+	// while (1+flags < argc && argv[1+flags][0] == '-') {
+	// 	switch (argv[1+flags][1]) {
+	// 	case 'f': force = 1; break;
+	// 	case 'y': yes = 1; break;
+	// 	default:
+	// 		fprintf(stderr, "Error: Unsupported option "
+	// 			"\"%s\"!\n", argv[1+flags]);
+	// 		help();
+	// 		exit(1);
+	// 	}
+	// 	flags++;
+	// }
 
-	if (version) {
-		fprintf(stderr, "i2cget version %s\n", VERSION);
-		exit(0);
-	}
+	force = 1;
+	yes = 1;
 
-	if (argc < flags + 3)
-		help();
+	// printf("flag num: %d, total arg num : %d\n",flags, argc);
+
+	// if (argc < flags + 3)
+	// 	help();
 
 	i2cbus = lookup_i2c_bus(argv[flags+1]);
 	if (i2cbus < 0)
 		help();
 
-	address = parse_i2c_address(argv[flags+2]);
-	if (address < 0)
-		help();
+	// address = parse_i2c_address(argv[flags+2]);
+	// if (address < 0)
+	// 	help();
 
-	if (argc > flags + 3) {
-		size = I2C_SMBUS_BYTE_DATA;
-		daddress = strtol(argv[flags+3], &end, 0);
-		if (*end || daddress < 0 || daddress > 0xff) {
-			fprintf(stderr, "Error: Data address invalid!\n");
-			help();
-		}
-	} else {
-		size = I2C_SMBUS_BYTE;
-		daddress = -1;
-	}
+	// if (argc > flags + 3) {
+	// 	size = I2C_SMBUS_BYTE_DATA;
+	// 	daddress = strtol(argv[flags+3], &end, 0);
+	// 	if (*end || daddress < 0 || daddress > 0xff) {
+	// 		fprintf(stderr, "Error: Data address invalid!\n");
+	// 		help();
+	// 	}
+	// } else {
+	// 	size = I2C_SMBUS_BYTE;
+	// 	daddress = -1;
+	// }
 
-	if (argc > flags + 4) {
-		switch (argv[flags+4][0]) {
-		case 'b': size = I2C_SMBUS_BYTE_DATA; break;
-		case 'w': size = I2C_SMBUS_WORD_DATA; break;
-		case 'c': size = I2C_SMBUS_BYTE; break;
-		default:
-			fprintf(stderr, "Error: Invalid mode!\n");
-			help();
-		}
-		pec = argv[flags+4][1] == 'p';
-	}
+	address = 0x1e;
+	size = I2C_SMBUS_BYTE_DATA;
+	daddress = 0x0d;
+
+	// if (argc > flags + 4) {
+	// 	switch (argv[flags+4][0]) {
+	// 	case 'b': size = I2C_SMBUS_BYTE_DATA; break;
+	// 	case 'w': size = I2C_SMBUS_WORD_DATA; break;
+	// 	case 'c': size = I2C_SMBUS_BYTE; break;
+	// 	default:
+	// 		fprintf(stderr, "Error: Invalid mode!\n");
+	// 		help();
+	// 	}
+	// 	pec = argv[flags+4][1] == 'p';
+	// }
 
 	file = open_i2c_dev(i2cbus, filename, sizeof(filename), 0);
 	if (file < 0

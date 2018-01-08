@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/linux/i2c-dev.h
+linux/types.h
+-
+sys/ioctl.h
+-
+stddef.h
+-
+
+../tools/inc/i2c-tools/i2cbusses.h
+unistd.h
+-
+
+../tools/inc/i2c-tools/util.h
+
+../version.h
+
+/home/rdu/Workspace/i2c-tools/tools/tests/i2c_readreg.c
+sys/ioctl.h
+-
+errno.h
+-
+string.h
+-
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+linux/i2c-dev.h
+-
+i2c-tools/i2cbusses.h
+/home/rdu/Workspace/i2c-tools/tools/tests/i2c-tools/i2cbusses.h
+i2c-tools/util.h
+/home/rdu/Workspace/i2c-tools/tools/tests/i2c-tools/util.h
+../version.h
+/home/rdu/Workspace/i2c-tools/tools/version.h
+

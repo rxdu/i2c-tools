@@ -19,7 +19,7 @@
 */
 
 #include <stdio.h>
-#include "util.h"
+#include "i2c-tools/util.h"
 
 /* Return 1 if we should continue, 0 if we should abort */
 int user_ack(int def)

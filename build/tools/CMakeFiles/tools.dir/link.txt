@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../lib/libtools.a  CMakeFiles/tools.dir/src/i2cbusses.c.o CMakeFiles/tools.dir/src/i2cdetect.c.o CMakeFiles/tools.dir/src/i2cdump.c.o CMakeFiles/tools.dir/src/i2cget.c.o CMakeFiles/tools.dir/src/i2cset.c.o CMakeFiles/tools.dir/src/util.c.o
+/usr/bin/ranlib ../lib/libtools.a

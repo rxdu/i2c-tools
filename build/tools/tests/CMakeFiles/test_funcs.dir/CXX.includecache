@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../tools/inc/i2c-tools/i2cbusses.h
+unistd.h
+-
+
+/home/rdu/Workspace/i2c-tools/tools/tests/test_funcs.cpp
+iostream
+-
+i2c-tools/i2cbusses.h
+/home/rdu/Workspace/i2c-tools/tools/tests/i2c-tools/i2cbusses.h
+

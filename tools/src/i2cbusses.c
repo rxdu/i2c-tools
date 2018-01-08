@@ -25,6 +25,8 @@
 /* For strdup and snprintf */
 #define _BSD_SOURCE 1
 
+#include "i2c-tools/i2cbusses.h"
+
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <sys/param.h>	/* for NAME_MAX */
@@ -38,7 +40,6 @@
 #include <dirent.h>
 #include <fcntl.h>
 #include <errno.h>
-#include "i2cbusses.h"
 #include <linux/i2c-dev.h>
 
 enum adt { adt_dummy, adt_isa, adt_i2c, adt_smbus, adt_unknown };
