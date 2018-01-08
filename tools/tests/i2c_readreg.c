@@ -181,9 +181,9 @@ int main(int argc, char *argv[])
 	// if (argc < flags + 3)
 	// 	help();
 
-	i2cbus = lookup_i2c_bus(argv[flags+1]);
-	if (i2cbus < 0)
-		help();
+	// i2cbus = lookup_i2c_bus(argv[flags+1]);
+	// if (i2cbus < 0)
+	// 	help();
 
 	// address = parse_i2c_address(argv[flags+2]);
 	// if (address < 0)
@@ -201,6 +201,7 @@ int main(int argc, char *argv[])
 	// 	daddress = -1;
 	// }
 
+	i2cbus = 3;
 	address = 0x1e;
 	size = I2C_SMBUS_BYTE_DATA;
 	daddress = 0x0d;

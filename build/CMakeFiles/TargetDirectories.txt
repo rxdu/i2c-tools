@@ -1,9 +1,0 @@
-/home/rdu/Workspace/i2c-tools/build/CMakeFiles/rebuild_cache.dir
-/home/rdu/Workspace/i2c-tools/build/CMakeFiles/edit_cache.dir
-/home/rdu/Workspace/i2c-tools/build/tools/CMakeFiles/rebuild_cache.dir
-/home/rdu/Workspace/i2c-tools/build/tools/CMakeFiles/edit_cache.dir
-/home/rdu/Workspace/i2c-tools/build/tools/CMakeFiles/tools.dir
-/home/rdu/Workspace/i2c-tools/build/tools/tests/CMakeFiles/rebuild_cache.dir
-/home/rdu/Workspace/i2c-tools/build/tools/tests/CMakeFiles/test_funcs.dir
-/home/rdu/Workspace/i2c-tools/build/tools/tests/CMakeFiles/edit_cache.dir
-/home/rdu/Workspace/i2c-tools/build/tools/tests/CMakeFiles/test_i2c_readreg.dir
