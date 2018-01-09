@@ -1,0 +1,15 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+check_funcs	/home/rdu/Workspace/i2c-tools/tools/tests/i2c_readreg.c	/^static int check_funcs(int file, int size, int daddress, int pec) {$/;"	f	file:
+check_funcs	i2c_readreg.c	/^static int check_funcs(int file, int size, int daddress, int pec) {$/;"	f	file:
+confirm	/home/rdu/Workspace/i2c-tools/tools/tests/i2c_readreg.c	/^static int confirm(const char *filename, int address, int size, int daddress,$/;"	f	file:
+confirm	i2c_readreg.c	/^static int confirm(const char *filename, int address, int size, int daddress,$/;"	f	file:
+help	/home/rdu/Workspace/i2c-tools/tools/tests/i2c_readreg.c	/^static void help(void) {$/;"	f	file:
+help	i2c_readreg.c	/^static void help(void) {$/;"	f	file:
+main	/home/rdu/Workspace/i2c-tools/tools/tests/i2c_readreg.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	i2c_readreg.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	test_funcs.cpp	/^int main()$/;"	f
