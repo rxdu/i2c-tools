@@ -30,3 +30,4 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 
 ## Add other sub source directories
 add_subdirectory(tools)
+add_subdirectory(i2c-bus)
